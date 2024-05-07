@@ -1,9 +1,91 @@
+<!-- Code from https://www.w3schools.com/css/tryit.asp?filename=trycss_forms -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejercicio 2</title>
+    <style>
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="button"] {
+        width: 100%;
+        background-color: #4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="button"]:hover {
+        background-color: #45a049;
+      }
+
+      div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <form>
+      <label for="fname">First Name</label>
+      <input
+        type="text"
+        id="fname"
+        name="firstname"
+        placeholder="Your name.."
+      />
+
+      <label for="lname">Last Name</label>
+      <input
+        type="text"
+        id="lname"
+        name="lastname"
+        placeholder="Your last name.."
+      />
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="mexico">México</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+
+      <input type="button" value="Submit" id="submit" />
+    </form>
+    <script>
+      // Variables
+      const button = document.getElementById("submit");
+      const name = document.getElementById("fname");
+      const lastName = document.getElementById("lname");
+      const country = document.getElementById("country");
+
+      // Eventos
+      button.addEventListener("click", sendMessage);
+
+      // Funciones
+      function sendMessage(e) {
+        console.log(name.value);
+        console.log(lastName.value);
+        console.log(country.value);
+
+        // Validacion
+
+        // Mandar mensaje
+      }
+    </script>
+  </body>
 </html>
